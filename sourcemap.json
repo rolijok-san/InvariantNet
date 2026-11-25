@@ -1,0 +1,71 @@
+{
+  "name": "Game",
+  "className": "DataModel",
+  "children": [
+    {
+      "name": "ReplicatedStorage",
+      "className": "ReplicatedStorage",
+      "children": [
+        {
+          "name": "InvariantNet",
+          "className": "ModuleScript",
+          "filePaths": ["src/shared/InvariantNet/init.luau"],
+          "children": [
+            { "name": "ChannelRouter", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/ChannelRouter.luau"] },
+            { "name": "CutCuller", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/CutCuller.luau"] },
+            { "name": "FrameBatcher", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/FrameBatcher.luau"] },
+            { "name": "Packet", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/Packet.luau"] },
+            { "name": "PartitionGraph", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/PartitionGraph.luau"] },
+            {
+              "name": "Predictor",
+              "className": "ModuleScript",
+              "filePaths": ["src/shared/InvariantNet/Predictor/init.luau"],
+              "children": [
+                { "name": "SeedStream", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/Predictor/SeedStream.luau"] },
+                { "name": "SubspaceProjector", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/Predictor/SubspaceProjector.luau"] },
+                { "name": "TrajectoryFlow", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/Predictor/TrajectoryFlow.luau"] }
+              ]
+            },
+            { "name": "QuotientMonoid", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/QuotientMonoid.luau"] },
+            { "name": "SmartHeader", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/SmartHeader.luau"] },
+            { "name": "Types", "className": "ModuleScript", "filePaths": ["src/shared/InvariantNet/Types.luau"] }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ServerScriptService",
+      "className": "ServerScriptService",
+      "children": [
+        {
+          "name": "InvariantNet",
+          "className": "Script",
+          "filePaths": ["src/ServerScriptService/InvariantNet.luau"]
+        }
+      ]
+    },
+    {
+      "name": "StarterPlayer",
+      "className": "StarterPlayer",
+      "children": [
+        {
+          "name": "StarterPlayerScripts",
+          "className": "StarterPlayerScripts",
+          "children": [
+            {
+              "name": "InvariantNet",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "Client",
+                  "className": "ModuleScript",
+                  "filePaths": ["src/StarterPlayer/StarterPlayerScripts/InvariantNet/Client.luau"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
