@@ -13,7 +13,6 @@ AUTHOR: CRIMOFD
 local Players = game:GetService("Players")
 
 local Packet = require(script.Parent.Packet)
-local Types = require(script.Parent.Types)
 
 export type ChannelKind = "Reliable" | "Unreliable"
 
